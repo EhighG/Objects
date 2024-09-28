@@ -6,7 +6,13 @@ public class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    public TicketOffice getTicketOffice() {
-        return ticketOffice;
+    public void sellTo(Audience audience) {
+        Bag bag = audience.getBag();
+        Ticket ticket = ticketOffice.getTicket();
+        if (!bag.hasInvitation()) {
+            bag.minusCash(ticket.getFee());
+            ticketOffice.plusCash(ticket.getFee());
+        }
+        bag.setTicket(ticket);
     }
 }
