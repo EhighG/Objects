@@ -7,12 +7,6 @@ public class TicketSeller {
     }
 
     public void sellTo(Audience audience) {
-        Bag bag = audience.getBag();
-        Ticket ticket = ticketOffice.getTicket();
-        if (!bag.hasInvitation()) {
-            bag.minusCash(ticket.getFee());
-            ticketOffice.plusCash(ticket.getFee());
-        }
-        bag.setTicket(ticket);
+        ticketOffice.plusCash(audience.buy(ticketOffice.getTicket()));
     }
 }
