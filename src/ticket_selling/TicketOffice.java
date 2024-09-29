@@ -1,3 +1,5 @@
+package ticket_selling;
+
 import java.util.*;
 
 public class TicketOffice {
