@@ -4,6 +4,7 @@ import jdk.jfr.Period;
 import movie_reservation.discount_condition.PeriodCondition;
 import movie_reservation.discount_condition.SequenceCondition;
 import movie_reservation.discount_policy.AmountDiscountPolicy;
+import movie_reservation.discount_policy.NoneDiscountPolicy;
 import movie_reservation.discount_policy.PercentDiscountPolicy;
 
 import java.time.DayOfWeek;
@@ -33,5 +34,10 @@ public class MovieReservation {
                         new SequenceCondition(2),
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(13, 59))));
 
+        // 스타워즈
+        Movie starWars = new Movie("스타워즈",
+                Duration.ofMinutes(210),
+                Money.wons(10000),
+                new NoneDiscountPolicy());
     }
 }
