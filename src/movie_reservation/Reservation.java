@@ -1,4 +1,4 @@
-package ticket_reservation;
+package movie_reservation;
 
 public class Reservation {
     private Customer customer;

@@ -1,4 +1,6 @@
-package ticket_reservation;
+package movie_reservation;
+
+import movie_reservation.discount_policy.DiscountPolicy;
 
 import java.time.Duration;
 
@@ -20,6 +22,6 @@ public class Movie {
     }
 
     public Money calculateMovieFee(Screening screening) {
-        return Money.ZERO;
+        return fee.minus(discountPolicy.calculateDiscountAmount(screening));
     }
 }

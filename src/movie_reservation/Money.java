@@ -1,4 +1,4 @@
-package ticket_reservation;
+package movie_reservation;
 
 import java.math.BigDecimal;
 
