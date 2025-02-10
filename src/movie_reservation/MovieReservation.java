@@ -39,5 +39,8 @@ public class MovieReservation {
                 Duration.ofMinutes(210),
                 Money.wons(10000),
                 new NoneDiscountPolicy());
+
+        // 할인 정책 변경
+        starWars.changeDiscountPolicy(new PercentDiscountPolicy(0.1, new SequenceCondition(1)));
     }
 }
