@@ -1,5 +1,6 @@
 package movie_reservation;
 
+import movie_reservation.discount_policy.DefaultDiscountPolicy;
 import movie_reservation.discount_policy.DiscountPolicy;
 
 import java.time.Duration;

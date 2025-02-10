@@ -4,7 +4,7 @@ import movie_reservation.Money;
 import movie_reservation.Screening;
 import movie_reservation.discount_condition.DiscountCondition;
 
-public class PercentDiscountPolicy extends DiscountPolicy {
+public class PercentDiscountPolicy extends DefaultDiscountPolicy {
     private double percent;
 
     public PercentDiscountPolicy(double percent, DiscountCondition... conditions) {
